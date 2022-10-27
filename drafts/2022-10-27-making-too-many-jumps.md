@@ -15,3 +15,5 @@ I have just attempted to run the software and discovered that there is a missing
 I have decided to rollback to the point where I had working software.
 
 I have rolled back to the point where the software is working and the tests are green. There is however a bug that I have identified
+
+What this process has shown is that I need to get back to doing daily code tdd katas. I have let my skills and critical thinking around this lapse and it's time to get back on that horse.
