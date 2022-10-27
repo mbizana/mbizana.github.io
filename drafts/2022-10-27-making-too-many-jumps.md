@@ -17,3 +17,5 @@ I have decided to rollback to the point where I had working software.
 I have rolled back to the point where the software is working and the tests are green. There is however a bug that I have identified
 
 What this process has shown is that I need to get back to doing daily code tdd katas. I have let my skills and critical thinking around this lapse and it's time to get back on that horse.
+
+This whole exercise has highlighted the importance of deliberate practice/intentional practice frequently, especially when you're projects that don't value TDD. 
