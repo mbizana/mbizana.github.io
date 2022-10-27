@@ -1,0 +1,7 @@
+13 file code changes later, uncommitted, I am finding myself having to rollback. Even though I have had every intention of strictly making small incremental steps I find myself, over and over making this big jumps. I have intended to always have a working software system, but this is not happening, my software is in a broken state, the application is not running, how did I get here, what can I do to prevent this from happening in the future.
+
+Also on the question of where to start when doing TDD. This is still one of the most perplexing and sometimes frustating things about the process. I've second guessed myself several times. Should I do the inside in approach, inside-out, okay...where should i start is still not answered. what should be my first test. I've settled on testing the flow of a game from start to finish. Even, with this, I'm still unease about this because I am creating test doubles for what I consider not to be central to what I am testing. Then I forget to provide the actual implementation and the application crashes. What should I do here? Have a failing test until all required parts components are implement..maybe?
+
+Another temptation, looking too far into the future. I'm thinking about how different interfaces my interact with the core game logic, then again I end up writing too much logic without accompanying tests.
+
+Back to my 13 files with uncommitted changes. I have made the decision to rollback. I'm going to try my level best to go back to the fundamentals.
