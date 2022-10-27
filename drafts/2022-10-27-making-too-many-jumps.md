@@ -19,3 +19,7 @@ I have rolled back to the point where the software is working and the tests are 
 What this process has shown is that I need to get back to doing daily code tdd katas. I have let my skills and critical thinking around this lapse and it's time to get back on that horse.
 
 This whole exercise has highlighted the importance of deliberate practice/intentional practice frequently, especially when you're projects that don't value TDD. 
+
+Going back to the fundamentals and being strict about making mall incremental steps has given a certainty and confidence that I'm on top of things. One of the things I've observed in myself about making big jumps is there's always an underlying sense of dread about the code, an uncertainty that lingers about a possible edge case I've missed or something else that I can't put my finder on it.
+
+I've just caught myself again about to make another big jump by attempting to fix a bug by not first having a test for it. It's so easy to get into the trap of, "It's a small fix, I know what the logic needs to be". Good thing, I've caught it
