@@ -5,3 +5,13 @@ Also on the question of where to start when doing TDD. This is still one of the 
 Another temptation, looking too far into the future. I'm thinking about how different interfaces my interact with the core game logic, then again I end up writing too much logic without accompanying tests.
 
 Back to my 13 files with uncommitted changes. I have made the decision to rollback. I'm going to try my level best to go back to the fundamentals.
+
+One of the things I am committing to is a commit for any atomic change to the codebase. Maybe atomic is the wrong word, a commit for any change addresses one issue. For example, correcting formatting issues raised by a linter, that should result in one commit.
+
+Another commitment, I am making with myself is to always have working software. At any given point in time. I want to be able to run the software. No broken software
+
+I have just attempted to run the software and discovered that there is a missing implement. I should have had tests that fail because of missing implementation because my current suite of tests is green but I still do'nt have working software. I again this is a sign that I made too many big jumps.
+
+I have decided to rollback to the point where I had working software.
+
+I have rolled back to the point where the software is working and the tests are green. There is however a bug that I have identified
