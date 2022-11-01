@@ -25,3 +25,5 @@ Going back to the fundamentals and being strict about making mall incremental st
 I've just caught myself again about to make another big jump by attempting to fix a bug by not first having a test for it. It's so easy to get into the trap of, "It's a small fix, I know what the logic needs to be". Good thing, I've caught it
 
 Today I found myself falling into the trap of writing too much code withou committing. Thankfully, I was able to catch myself and rollback. Why does this happen? I think I was in some kind of flow state,where a lot of the decisions I was making were coming to me automatically without much thought. Can this be a good thing? I'm not so sure
+
+I think I have stumble on to something: Do not mock dependencies if it results in tests with large **Arrange** sections. I noticed this while working on the project. I have been committed in mocking all dependencies and then later realized that my tests setups were becoming large and large.
