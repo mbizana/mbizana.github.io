@@ -23,3 +23,5 @@ This whole exercise has highlighted the importance of deliberate practice/intent
 Going back to the fundamentals and being strict about making mall incremental steps has given a certainty and confidence that I'm on top of things. One of the things I've observed in myself about making big jumps is there's always an underlying sense of dread about the code, an uncertainty that lingers about a possible edge case I've missed or something else that I can't put my finder on it.
 
 I've just caught myself again about to make another big jump by attempting to fix a bug by not first having a test for it. It's so easy to get into the trap of, "It's a small fix, I know what the logic needs to be". Good thing, I've caught it
+
+Today I found myself falling into the trap of writing too much code withou committing. Thankfully, I was able to catch myself and rollback. Why does this happen? I think I was in some kind of flow state,where a lot of the decisions I was making were coming to me automatically without much thought. Can this be a good thing? I'm not so sure
