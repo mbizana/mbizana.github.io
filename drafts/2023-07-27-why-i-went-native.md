@@ -1,0 +1,2 @@
+- I didn't not like the steps involved in setting up wix/detox the e2e test framework for react native. It felt like a lot of work just to get my test environment setup
+- What I am enjoying about SwiftUI is the speed with which one can start to see something he can interact with on the screen.
