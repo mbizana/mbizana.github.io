@@ -1,7 +1,131 @@
 ---
 layout: default
 ---
-<div class="mbizana">
-  <article>mbizana</article>
-    {%- include social.html -%}
-</div>
+
+{%- include header.html -%}
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">{{ site.title }}</h1>
+    <p class="hero-tagline">{{ site.company.tagline }}</p>
+    <p class="hero-mission">{{ site.company.mission }}</p>
+    <div class="hero-cta">
+      <a href="#products" class="btn btn-primary">Explore Our Products</a>
+      <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="products-section">
+  <div class="container">
+    <h2 class="section-title">Our Products</h2>
+    <div class="products-grid">
+      {%- for product in site.products -%}
+      <div class="product-card">
+        <div class="product-header">
+          <h3 class="product-name">{{ product.name }}</h3>
+          <span class="product-status status-{{ product.status | downcase | replace: ' ', '-' }}">
+            {{ product.status }}
+          </span>
+        </div>
+        <p class="product-description">{{ product.description }}</p>
+        <div class="product-features">
+          <h4>Key Features:</h4>
+          <ul>
+            {%- for feature in product.features -%}
+            <li>{{ feature }}</li>
+            {%- endfor -%}
+          </ul>
+        </div>
+        <div class="product-actions">
+          {%- if product.status == "In Development" -%}
+          <button class="btn btn-outline" disabled>Coming Soon</button>
+          {%- else -%}
+          <a href="#" class="btn btn-primary">Learn More</a>
+          {%- endif -%}
+        </div>
+      </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2 class="section-title">About Mbizana</h2>
+        <p>We are a forward-thinking technology company dedicated to creating innovative SaaS solutions that empower
+          businesses to thrive in the digital age. Our team of experienced developers and business analysts work
+          tirelessly to deliver software that is both powerful and user-friendly.</p>
+        <p>With a focus on reliability, scalability, and exceptional user experience, we build products that grow with
+          your business and adapt to your evolving needs.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat">
+          <h3>2+</h3>
+          <p>Years of Experience</p>
+        </div>
+        <div class="stat">
+          <h3>1+</h3>
+          <p>Products in Development</p>
+        </div>
+        <div class="stat">
+          <h3>100%</h3>
+          <p>Customer Focused</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Preview Section -->
+{%- if site.posts.size > 0 -%}
+<section id="blog" class="blog-section">
+  <div class="container">
+    <h2 class="section-title">Latest Insights</h2>
+    <div class="blog-grid">
+      {%- assign recent_posts = site.posts | limit: 3 -%}
+      {%- for post in recent_posts -%}
+      <article class="blog-card">
+        <div class="blog-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          {%- if post.categories.size > 0 -%}
+          <span class="blog-category">{{ post.categories | first | capitalize }}</span>
+          {%- endif -%}
+        </div>
+        <h3 class="blog-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h3>
+        <p class="blog-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+        <a href="{{ post.url | relative_url }}" class="blog-read-more">Read More →</a>
+      </article>
+      {%- endfor -%}
+    </div>
+    <div class="blog-cta">
+      <a href="/blog" class="btn btn-outline">View All Posts</a>
+    </div>
+  </div>
+</section>
+{%- endif -%}
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="contact-content">
+      <div class="contact-info">
+        <p>Ready to transform your business with our innovative solutions? We'd love to hear from you.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <strong>Email:</strong> {{ site.email }}
+          </div>
+        </div>
+        {%- include social.html -%}
+      </div>
+    </div>
+  </div>
+</section>

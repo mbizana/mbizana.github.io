@@ -1,0 +1,250 @@
+---
+layout: default
+---
+
+{%- include header.html -%}
+
+<article class="post-page">
+    <div class="container">
+        <header class="post-header">
+            <div class="post-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+                {%- if page.categories.size > 0 -%}
+                <span class="post-category">{{ page.categories | first | capitalize }}</span>
+                {%- endif -%}
+                {%- if page.author -%}
+                <span class="post-author">by {{ page.author }}</span>
+                {%- endif -%}
+            </div>
+
+            <h1 class="post-title">{{ page.title | escape }}</h1>
+        </header>
+
+        <div class="post-content">
+            {{ content }}
+        </div>
+
+        <footer class="post-footer">
+            <div class="post-navigation">
+                {%- if page.previous.url -%}
+                <a class="prev-post" href="{{ page.previous.url | relative_url }}">
+                    <span class="nav-direction">← Previous</span>
+                    <span class="nav-title">{{ page.previous.title | escape }}</span>
+                </a>
+                {%- endif -%}
+
+                {%- if page.next.url -%}
+                <a class="next-post" href="{{ page.next.url | relative_url }}">
+                    <span class="nav-direction">Next →</span>
+                    <span class="nav-title">{{ page.next.title | escape }}</span>
+                </a>
+                {%- endif -%}
+            </div>
+
+            <div class="back-to-blog">
+                <a href="/blog" class="btn btn-outline">← Back to Blog</a>
+            </div>
+        </footer>
+    </div>
+</article>
+
+<style>
+    .post-page {
+        padding: 2rem 0 4rem;
+        min-height: 80vh;
+    }
+
+    .post-header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .post-meta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+        color: #6b7280;
+        flex-wrap: wrap;
+    }
+
+    .post-category {
+        background-color: #6366f1;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 16px;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .post-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        color: #1f2937;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .post-content {
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.7;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #374151;
+        }
+
+        a {
+            color: #6366f1;
+
+            &:hover {
+                color: #4f46e5;
+                text-decoration: underline;
+            }
+        }
+
+        ul,
+        ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+
+            li {
+                margin-bottom: 0.5rem;
+                color: #374151;
+            }
+        }
+
+        blockquote {
+            border-left: 4px solid #6366f1;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #4b5563;
+        }
+
+        code {
+            background-color: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #dc2626;
+        }
+
+        pre {
+            background-color: #1f2937;
+            color: #f9fafb;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+
+            code {
+                background: none;
+                color: inherit;
+                padding: 0;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .post-footer {
+        max-width: 700px;
+        margin: 3rem auto 0;
+        padding-top: 2rem;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .post-navigation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .prev-post,
+    .next-post {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: #f9fafb;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: #f3f4f6;
+        }
+    }
+
+    .next-post {
+        text-align: right;
+    }
+
+    .nav-direction {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-bottom: 0.25rem;
+    }
+
+    .nav-title {
+        color: #1f2937;
+        font-weight: 500;
+    }
+
+    .back-to-blog {
+        text-align: center;
+    }
+
+    @media (max-width: 768px) {
+        .post-title {
+            font-size: 2rem;
+        }
+
+        .post-meta {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .post-navigation {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .next-post {
+            text-align: left;
+        }
+    }
+</style>

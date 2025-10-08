@@ -1,6 +1,5 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
+title: Mbizana - Innovative SaaS Solutions
+description: Empowering businesses through innovative technology solutions. Discover our suite of SaaS products designed to streamline your operations.
 ---

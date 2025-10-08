@@ -21,15 +21,45 @@
 title: Mbizana
 email: info@mbizana.com
 description: >- # this means to ignore newlines until "baseurl:"
-baseurl: "/" # the subpath of your site, e.g. /blog
+  Mbizana - Innovative SaaS solutions for modern businesses. 
+  Streamline your operations with our cutting-edge software products.
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mbizanacom
 github_username:  mbizana
+linkedin_username: company/mbizana
+
+# Company information
+company:
+  tagline: "Innovative SaaS Solutions for Modern Businesses"
+  mission: "Empowering businesses through innovative technology solutions"
+  
+# Products
+products:
+  - name: "Imvuzo"
+    description: "Comprehensive payroll management software"
+    status: "In Development"
+    features:
+      - "Automated payroll processing"
+      - "Tax compliance management"
+      - "Employee self-service portal"
+      - "Real-time reporting and analytics"
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Sass configuration
+sass:
+  style: compressed
+  sourcemap: development
+
+# Build configuration
+incremental: false
+safe: false
 
 # Exclude from processing.
 # The following items will not be processed, by default.
