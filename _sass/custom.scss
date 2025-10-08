@@ -161,9 +161,27 @@ h6 {
         font-weight: 700;
         color: $text-primary;
         text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: $spacing-sm;
 
         &:hover {
             color: $primary-color;
+        }
+
+        .brand-logo {
+            height: 32px;
+            width: auto;
+        }
+
+        .brand-text {
+            display: inline-block;
+        }
+
+        @media (max-width: $tablet) {
+            .brand-text {
+                display: none;
+            }
         }
     }
 
@@ -567,7 +585,7 @@ section {
     color: white;
 
     .section-title {
-        color: white;
+        color: white !important;
     }
 
     .contact-content {
