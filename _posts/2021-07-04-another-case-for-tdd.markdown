@@ -3,7 +3,7 @@ layout: post
 title:  "Another case for TDD"
 date:   2021-07-04 09:45:00 +0200
 categories: software development
-author: Zuko Mgwili
+#author: Zuko Mgwili
 ---
 I would like to believe that most people in software engineering are fully convinced of the merits of test driven development, but for the very few holdouts out there, maybe this little anecdote from an experience I had will persuade you to at least explore the practice.
 

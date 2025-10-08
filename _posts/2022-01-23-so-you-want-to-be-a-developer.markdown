@@ -3,7 +3,7 @@ layout: post
 title: "So you want to be a developer"
 date: 2022-01-23 10:34:00 +0200
 categories: learning
-author: Zuko Mgwili
+#author: Zuko Mgwili
 ---
 
 There has been a lot of coverage in the news about the "great resignation" , people leaving jobs and deciding to try something different. I gather that the reason you are reading this is because you are thinking of exploring a career in software development. I would like to offer a very warm welcome to you and are looking forward to walking with you on this journey.

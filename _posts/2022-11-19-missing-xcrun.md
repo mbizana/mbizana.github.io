@@ -3,7 +3,7 @@ layout: post
 title:  "Missing xcrun"
 date:   2022-11-19 16:20 +0000
 categories: software development
-author: Zuko Mgwili
+#author: Zuko Mgwili
 ---
 
 I had just pulled a Ruby on rails project from Github and then proceeded to execute the following command:
