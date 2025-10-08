@@ -1,5 +1,5 @@
 ---
 layout: home
-title: Mbizana - Innovative SaaS Solutions
-description: Empowering businesses through innovative technology solutions. Discover our suite of SaaS products designed to streamline your operations.
+title: Mbizana - Modern SaaS Solutions
+description: Empowering businesses through cutting-edge technology solutions. Discover our suite of SaaS products designed to streamline your operations.
 ---

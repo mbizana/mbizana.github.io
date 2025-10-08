@@ -21,7 +21,7 @@
 title: Mbizana
 email: info@mbizana.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Mbizana - Innovative SaaS solutions for modern businesses. 
+  Mbizana - Modern SaaS solutions for growing businesses. 
   Streamline your operations with our cutting-edge software products.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -31,8 +31,8 @@ linkedin_username: company/mbizana
 
 # Company information
 company:
-  tagline: "Innovative SaaS Solutions for Modern Businesses"
-  mission: "Empowering businesses through innovative technology solutions"
+  tagline: "Modern SaaS Solutions for Growing Businesses"
+  mission: "Empowering businesses through cutting-edge technology solutions"
   
 # Products
 products:
